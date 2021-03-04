@@ -1,7 +1,10 @@
 <template>
   <div>
     <v-container>
-      <h1 id="mountains-title">If you want to escape from the big cities, we also offer travel plans to natural areas and mountains</h1>
+      <h1 id="mountains-title">
+        If you want to escape from the big cities, we also offer travel plans to natural
+        areas and mountains
+      </h1>
     </v-container>
 
     <v-row v-for="(item, i) in items" :key="i">
@@ -31,28 +34,62 @@ export default {
 <style lang="scss" scoped>
 @import "src/scss/variables";
 
-#mountains-title {
-  font-size: 6em;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  background: url(../assets/img/mountains-7.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 200px;
+// ******* MOBILE RESPONSIVE ******* //
+@media only screen and (min-width: 360px) {
+}
+// ******* LAPTOP RESPONSIVE ******* //
+@media only screen and (min-width: 767px) {
+  #mountains-title {
+    font-size: 5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background: url(../assets/img/mountains-7.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 200px;
+  }
+
+  #mountains-places {
+    position: relative;
+    right: 25px;
+    font-size: 13em;
+    color: rgba(255, 255, 255, 0.618);
+    background: url(../assets/img/mountains-5.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
-#mountains-places {
-  position: relative;
-  right: 25px;
-  font-size: 15em;
-  color: rgba(255, 255, 255, 0.618);
-  background: url(../assets/img/mountains-5.jpg);
-  background-attachment: fixed;
-  background-position: bottom;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+// ******* DESKTOP RESPONSIVE ******* //
+@media only screen and (min-width: 1370px) {
+  #mountains-title {
+    font-size: 6em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background: url(../assets/img/mountains-7.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 200px;
+  }
+
+  #mountains-places {
+    position: relative;
+    right: 25px;
+    font-size: 15em;
+    color: rgba(255, 255, 255, 0.618);
+    background: url(../assets/img/mountains-5.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 </style>

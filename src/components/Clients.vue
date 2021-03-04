@@ -20,8 +20,16 @@ export default {
   data() {
     return {
       quotes: [
-        { quote: "Quite simply the very best travel company we have ever experienced… guides were top-flight; the hotels were beyond our expectations… And working with the staff was very, very pleasant.", client: "Ethan Hunt" },
-        { quote: "I urge you to carefully consider Travel & Beyond who, quite simply, provides unparalleled travel experiences and arrangements in countries as Spain or France.", client: "Laura Palmer" },
+        {
+          quote:
+            "Quite simply the very best travel company we have ever experienced… guides were top-flight; the hotels were beyond our expectations… And working with the staff was very, very pleasant.",
+          client: "Ethan Hunt",
+        },
+        {
+          quote:
+            "I urge you to carefully consider Travel & Beyond who, quite simply, provides unparalleled travel experiences and arrangements in countries as Spain or France.",
+          client: "Laura Palmer",
+        },
         {
           quote:
             "THANK YOU for a trip to England that we will treasure forever in our photos and our memories. We are deeply grateful to you and wish you only the best as you continue to build what should be the model for tour agencies everywhere. As promised, we will recommend you to everyone and anyone we know traveling to England!",
@@ -33,37 +41,79 @@ export default {
 };
 </script>
 
-<style>
-#clients {
-  background: url("../assets/img/mountains-3.jpg");
-  background-position: top;
-  background-size: cover;
+<style lang="scss">
+// ******* MOBILE RESPONSIVE ******* //
+@media only screen and (min-width: 360px) {
+}
+// ******* LAPTOP RESPONSIVE ******* //
+@media only screen and (min-width: 767px) {
+  #clients {
+    background: url("../assets/img/mountains-3.jpg");
+    background-position: top;
+    background-size: cover;
+  }
+
+  #clients-title {
+    font-size: 5em;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: url(../assets/img/mountains-7.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #quotes-carousel {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(61, 43, 43);
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 100px;
+  }
+
+  #client {
+    color: rgb(51, 84, 232);
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
 
-#clients-title {
-  font-size: 6em;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-  background: url(../assets/img/mountains-7.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+// ******* DESKTOP RESPONSIVE ******* //
+@media only screen and (min-width: 1370px) {
+  #clients {
+    background: url("../assets/img/mountains-3.jpg");
+    background-position: top;
+    background-size: cover;
+  }
 
-#quotes-carousel {
-  text-align: center;
-  font-size: 30px;
-  color: rgb(61, 43, 43);
-  margin-left: 400px;
-  margin-right: 400px;
-  margin-top: 100px;
-}
+  #clients-title {
+    font-size: 6em;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: url(../assets/img/mountains-7.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-#client {
-  color: rgb(51, 84, 232);
-  font-size: 30px;
-  font-weight: bold;
+  #quotes-carousel {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(61, 43, 43);
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 100px;
+  }
+
+  #client {
+    color: rgb(51, 84, 232);
+    font-size: 30px;
+    font-weight: bold;
+  }
 }
 </style>

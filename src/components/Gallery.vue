@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-row>
       <v-col cols="4" v-for="(item, i) in gallery" :key="i">
         <div class="mx-auto pa-5" id="gallery-card">
@@ -40,32 +40,71 @@ export default {
 <style lang="scss">
 @import "src/scss/variables";
 
-#card-body {
-  padding-top: 20px;
-  z-index: 99;
+// ******* MOBILE RESPONSIVE ******* //
+@media only screen and (min-width: 360px) {
+}
+// ******* LAPTOP RESPONSIVE ******* //
+@media only screen and (min-width: 767px) {
+  #card-body {
+    padding-top: 20px;
+    z-index: 99;
+  }
+
+  #gallery-card {
+    font-family: $style4;
+    font-weight: bold;
+    width: 350px;
+    overflow: hidden;
+
+    &:hover {
+      border-bottom: 1px solid rgb(0, 110, 255);
+      border-right: 1px solid rgb(0, 110, 255);
+      transition: 0.3s;
+      cursor: pointer;
+
+      #plus-icon {
+        color: blue;
+        transform: rotate(180deg);
+        transition: 1s;
+      }
+
+      #img-card {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+    }
+  }
 }
 
-#gallery-card {
-  font-family: $style4;
-  font-weight: bold;
-  width: 450px;
-  overflow: hidden;
+// ******* DESKTOP RESPONSIVE ******* //
+@media only screen and (min-width: 1370px) {
+  #card-body {
+    padding-top: 20px;
+    z-index: 99;
+  }
 
-  &:hover {
-    border-bottom: 1px solid rgb(0, 110, 255);
-    border-right: 1px solid rgb(0, 110, 255);
-    transition: 0.3s;
-    cursor: pointer;
+  #gallery-card {
+    font-family: $style4;
+    font-weight: bold;
+    width: 450px;
+    overflow: hidden;
 
-    #plus-icon {
-      color: blue;
-      transform: rotate(180deg);
-      transition: 1s;
-    }
-
-    #img-card {
-      transform: scale(1.1);
+    &:hover {
+      border-bottom: 1px solid rgb(0, 110, 255);
+      border-right: 1px solid rgb(0, 110, 255);
       transition: 0.3s;
+      cursor: pointer;
+
+      #plus-icon {
+        color: blue;
+        transform: rotate(180deg);
+        transition: 1s;
+      }
+
+      #img-card {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
     }
   }
 }

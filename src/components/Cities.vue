@@ -31,37 +31,81 @@ export default {
 <style lang="scss">
 @import "src/scss/variables";
 
-#city-name {
-  visibility: hidden;
-  position: absolute;
-  left: 15px;
-  font-size: 20em;
-  color: rgba(255, 255, 255, 0.618);
-  background: url(../assets/img/skyline.jpg);
-  background-attachment: fixed;
-  background-position: bottom;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+// ******* MOBILE RESPONSIVE ******* //
+@media only screen and (min-width: 360px) {
 }
-
-#city-image:hover {
-  transform: scale(1.1);
-  transition: 1s;
-
+// ******* LAPTOP RESPONSIVE ******* //
+@media only screen and (min-width: 767px) {
   #city-name {
-    transform: scale(0.8);
-    visibility: visible;
-    animation: fadeIn ease 0.5s;
-    cursor: pointer;
+    visibility: hidden;
+    position: absolute;
+    left: 15px;
+    bottom: 50px;
+    font-size: 16em;
+    color: rgba(255, 255, 255, 0.618);
+    background: url(../assets/img/skyline.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #city-image:hover {
+    transform: scale(1.1);
+    transition: 1s;
+
+    #city-name {
+      transform: scale(0.8);
+      visibility: visible;
+      animation: fadeIn ease 0.5s;
+      cursor: pointer;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+// ******* DESKTOP RESPONSIVE ******* //
+@media only screen and (min-width: 1370px) {
+  #city-name {
+    visibility: hidden;
+    position: absolute;
+    left: 15px;
+    font-size: 20em;
+    color: rgba(255, 255, 255, 0.618);
+    background: url(../assets/img/skyline.jpg);
+    background-attachment: fixed;
+    background-position: bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  100% {
-    opacity: 1;
+
+  #city-image:hover {
+    transform: scale(1.1);
+    transition: 1s;
+
+    #city-name {
+      transform: scale(0.8);
+      visibility: visible;
+      animation: fadeIn ease 0.5s;
+      cursor: pointer;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 </style>

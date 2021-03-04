@@ -36,20 +36,45 @@ export default {
 };
 </script>
 
-<style>
-#experience,
-#gallery,
-#cities,
-#mountains,
-#clients,
-#contact {
-  position: relative;
-  padding-top: 200px;
-  padding-bottom: 200px;
+<style lang="scss">
+// ******* MOBILE RESPONSIVE ******* //
+@media only screen and (min-width: 360px) {
+}
+// ******* LAPTOP RESPONSIVE ******* //
+@media only screen and (min-width: 767px) {
+  #experience,
+  #gallery,
+  #cities,
+  #mountains,
+  #clients,
+  #contact {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  #footer {
+    position: relative;
+    bottom: 0px;
+  }
 }
 
-#footer {
-  position: relative;
-  bottom: 0px;
+// ******* DESKTOP RESPONSIVE ******* //
+@media only screen and (min-width: 1370px) {
+  #experience,
+  #gallery,
+  #cities,
+  #mountains,
+  #clients,
+  #contact {
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  #footer {
+    position: relative;
+    bottom: 0px;
+  }
 }
 </style>
